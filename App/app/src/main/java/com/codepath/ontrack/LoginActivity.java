@@ -43,6 +43,9 @@ public class LoginActivity extends AppCompatActivity {
                 login(etUsername.getText().toString(),etPassword.getText().toString());
             }
         });
+
+        checkUser();
+
     }
 
     private void checkUser() {
