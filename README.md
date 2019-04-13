@@ -37,7 +37,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 * Location-tracking
 * Social connection
 * Send baton as a way to collaborate with another user
-* Alert of a new baton comming in
+* Alert of a new baton coming in
 * See friend's profile
 * Compare completed batons
 
@@ -48,9 +48,24 @@ OnTrack is an app for students looking to increase their daily focus and drive b
     * App remembers previous log in and persists the user until log out
 * Register
     * User signs up for an account
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Add checkpoints to backlog
+   * Keep track of high level tasks that need to be done
+* Add batons to checkpoint
+   * Break down large task to smaller, more feasible batons and add a weight to each of them
+* Attach files to checkpoint
+    * Using camera or phone file system, attach relevant files to checkpoint
+* Initialize lap
+    * Set lap length and preferences
+* This lap
+   * See incomplete checkpoints for lap in progress
+* Lap time
+    * See relevant stats for lap in progress
+* Highlights
+    * See visualisations of how well the user did in this lap
+    * Allow user to do a retro where they reflect on:
+        * Successful actions in this lap
+        * Areas in which they can improve
+        * Hurdles they ran into
 
 ### 3. Navigation
 
@@ -78,7 +93,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 ### Original App Storyboard
 
-<img src="designs/Hand-drawn-sketches/IMG_4902.jpg" width=600>
+<img src="designs/Hand-drawn-sketches/IMG_4902.jpg" width=00>
 
 <img src="designs/Hand-drawn-sketches/IMG_4903.jpg" width=600>
 
@@ -87,21 +102,21 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 ### Digital Wireframes & Mockups
 
-<img src="designs/Backlog.png" width=600>
+<img src="designs/Backlog.png" width=300>
 
-<img src="designs/Add Batons to Checkpoint.png" width=600>
+<img src="designs/Add Batons to Checkpoint.png" width=300>
 
-<img src="designs/Camera.png" width=600>
+<img src="designs/Camera.png" width=300>
 
-<img src="designs/This Lap.png" width=600>
+<img src="designs/This Lap.png" width=300>
 
-<img src="designs/Lap Time.png" width=600>
+<img src="designs/Lap Time.png" width=300>
 
-<img src="designs/Highlights1.png" width=600>
+<img src="designs/Highlights1.png" width=300>
 
-<img src="designs/Highlights2.png" width=600>
+<img src="designs/Highlights2.png" width=300>
 
-<img src="designs/Highlights3.png" width=600>
+<img src="designs/Highlights3.png" width=300>
 
 
 
