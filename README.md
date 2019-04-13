@@ -9,17 +9,17 @@ Not just another task management app.
 2. [Schema](#Schema)
 
 ## Overview
-### Description
-[Description of your app]
+### What is OnTrack?
+OnTrack is an app for students looking to increase their daily focus and drive by making their productivity more tangible, inspired by Scrum, an Agile project management framework engineers use to address complex problems.
+
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Task Management
+- **Mobile:** This app uses the camera and real-time push notifications.
+- **Story:** By helping students keep track of their completed and desired accomplishments, this app helps students maintain high morale, motivation, and work-life balance.
+- **Market:** This app is geared toward college students who hope to be more productive, and who feel they have trouble keeping themselves motivated.
+- **Habit:** This app would be used daily as a way to keep users focused and motivated in their tasks.
+- **Scope:** 
 
 ## Product Spec
 
@@ -27,19 +27,27 @@ Not just another task management app.
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Database keeping track of users, checkpoints (high-level tasks), and batons (lower-level breakdown of tasks)
+* Push notifications for reminders to complete tasks
+* Camera to add photos to checkpoints
+* Create data visualisations of completed tasks
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Location-tracking
+* Social connection
+* Send baton as a way to collaborate with another user
+* Alert of a new baton comming in
+* See friend's profile
+* Compare completed batons
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
+* Login
+    * User logs in to existing account
+    * App remembers previous log in and persists the user until log out
+* Register
+    * User signs up for an account
 * [list second screen here]
    * [list associated required story here]
    * ...
@@ -62,12 +70,40 @@ Not just another task management app.
    * ...
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="designs/Hand-drawn-sketches/IMG_4899.jpg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+<img src="designs/Hand-drawn-sketches/IMG_4900.jpg" width=600>
 
-### [BONUS] Interactive Prototype
+<img src="designs/Hand-drawn-sketches/IMG_4901.jpg" width=600>
+
+### Original App Storyboard
+
+<img src="designs/Hand-drawn-sketches/IMG_4902.jpg" width=600>
+
+<img src="designs/Hand-drawn-sketches/IMG_4903.jpg" width=600>
+
+<img src="designs/Hand-drawn-sketches/IMG_4904.jpg" width=600>
+
+
+### Digital Wireframes & Mockups
+
+<img src="designs/Backlog.png" width=600>
+
+<img src="designs/Add Batons to Checkpoint.png" width=600>
+
+<img src="designs/Camera.png" width=600>
+
+<img src="designs/This Lap.png" width=600>
+
+<img src="designs/Lap Time.png" width=600>
+
+<img src="designs/Highlights1.png" width=600>
+
+<img src="designs/Highlights2.png" width=600>
+
+<img src="designs/Highlights3.png" width=600>
+
+
 
 ## Schema 
 [This section will be completed in Unit 9]
