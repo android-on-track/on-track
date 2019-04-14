@@ -1,4 +1,4 @@
-# On Track
+# OnTrack
 
 Not just another task management app.
 
@@ -71,18 +71,29 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Checkpoint Backlog
+    * all high level tasks to be completed
+* This Lap
+    * all low-level tasks user chose to complete this lap
+* Lap Time
+    * relevant stats for lap in progress
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Checkpoint Backlog
+    * Add checkpoints to backlog
+    * Add batons to checkpoint
+    * Attach files to checkpoint
+* Batons
+    * Add attachments
+    * Send baton to another user to collaborate
+* Lap Time
+    * This lap
+    * Complete lap
+* Highlights
+    * Do a retro
+    * Start again
+
 
 ## Wireframes
 <img src="designs/Hand-drawn-sketches/IMG_4899.jpg" width=600>
@@ -103,19 +114,12 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 ### Digital Wireframes & Mockups
 
 <img src="designs/Backlog.png" width=300>
-
 <img src="designs/Add Batons to Checkpoint.png" width=300>
-
 <img src="designs/Camera.png" width=300>
-
 <img src="designs/This Lap.png" width=300>
-
 <img src="designs/Lap Time.png" width=300>
-
 <img src="designs/Highlights1.png" width=300>
-
 <img src="designs/Highlights2.png" width=300>
-
 <img src="designs/Highlights3.png" width=300>
 
 
