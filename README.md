@@ -112,15 +112,21 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 
 ### Digital Wireframes & Mockups
+<img src="designs/Updated-Frames/Backlog.png" width=300>
+<img src="designs/Updated-Frames/Add Batons to Checkpoint/ Dialog box.png" width=300>
+<img src="designs/Updated-Frames/SetLap.png" width=300>
+<img src="designs/Updated-Frames/Add Batons to Checkpoint.png" width=300>
+<img src="designs/Updated-Frames/Backlog Add Checkpoint.png" width=300>
+<img src="designs/Updated-Frames/This Lap.png" width=300>
+<img src="designs/Updated-Frames/This Lap with dialog box.png" width=300>
+<img src="designs/Updated-Frames/Camera.png" width=300>
+<img src="designs/Updated-Frames/Lap Time.png" width=300>
+<img src="designs/Updated-Frames/Lap Complete.png" width=300>
+<img src="designs/Updated-Frames/Replay.png" width=300>
+<img src="designs/Updated-Frames/Medals.png" width=300>
+<img src="designs/Updated-Frames/Coaches Comments.png" width=300>
+<img src="designs/Updated-Frames/Reflection.png" width=300>
 
-<img src="designs/Backlog.png" width=300>
-<img src="designs/Add Batons to Checkpoint.png" width=300>
-<img src="designs/Camera.png" width=300>
-<img src="designs/This Lap.png" width=300>
-<img src="designs/Lap Time.png" width=300>
-<img src="designs/Highlights1.png" width=300>
-<img src="designs/Highlights2.png" width=300>
-<img src="designs/Highlights3.png" width=300>
 
 
 
