@@ -19,7 +19,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 - **Story:** By helping students keep track of their completed and desired accomplishments, this app helps students maintain high morale, motivation, and work-life balance.
 - **Market:** This app is geared toward college students who hope to be more productive, and who feel they have trouble keeping themselves motivated.
 - **Habit:** This app would be used daily as a way to keep users focused and motivated in their tasks.
-- **Scope:** 
+- **Scope:** First we would start with students tracking their own tasks. We would then add functionality to add attachments to tasks in order to track relevant documents and information. We would then add capability for users to share batons (tasks) with others in order to collobarate with them. That would then include the ability to track batons that have been passed on. In the long run, it would be great to expand the user base beyond college students.
 
 ## Product Spec
 
