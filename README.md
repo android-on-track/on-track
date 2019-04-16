@@ -113,7 +113,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 ### Digital Wireframes & Mockups
 <img src="designs/Updated-Frames/Backlog.png" width=300>
-<img src="designs/Updated-Frames/Add Batons to Checkpoint/ Dialog box.png" width=300>
+<img src="designs/Updated-Frames/Add Batons to Checkpoint Dialog box.png" width=300>
 <img src="designs/Updated-Frames/SetLap.png" width=300>
 <img src="designs/Updated-Frames/Add Batons to Checkpoint.png" width=300>
 <img src="designs/Updated-Frames/Backlog Add Checkpoint.png" width=300>
