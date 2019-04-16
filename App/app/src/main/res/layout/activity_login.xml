@@ -9,12 +9,13 @@
     tools:context=".LoginActivity"
     android:background="#3E86A0">
 
-    <EditText
+    <TextView
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="180dp"
         android:layout_marginBottom="20dp"
+        android:autoText="false"
         android:text="OnTrack"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
