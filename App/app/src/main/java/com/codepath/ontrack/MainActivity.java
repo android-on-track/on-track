@@ -1,7 +1,8 @@
 package com.codepath.ontrack;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -18,17 +19,17 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv1;
-
+    private BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        //tv1 = findViewById(R.id.tv1);
 
-        tv1 = findViewById(R.id.tv1);
-
-        queryBaton();
-        queryBackLog();
-        queryUserProfile();
+        //       queryBaton();
+        //       queryBackLog();
+        //      queryUserProfile();
 
     }
 
