@@ -20,4 +20,10 @@
         android:title="Progress"
         android:visible="true"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/icon_user"
+        android:icon="@drawable/ic_ontrack_user"
+        android:title="User Profile"
+        android:visible="true"
+        app:showAsAction="always" />
 </menu>

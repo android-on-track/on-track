@@ -1,11 +1,19 @@
 package com.codepath.ontrack;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.codepath.ontrack.Fragments.BacklogFragment;
+import com.codepath.ontrack.Fragments.LapFragment;
+import com.codepath.ontrack.Fragments.ProgressFragment;
+import com.codepath.ontrack.Fragments.UserFragment;
 import com.codepath.ontrack.Parse.BackLog;
 import com.codepath.ontrack.Parse.Baton;
 import com.codepath.ontrack.Parse.UserProfile;
@@ -23,16 +31,43 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
         //tv1 = findViewById(R.id.tv1);
 
         //       queryBaton();
         //       queryBackLog();
         //      queryUserProfile();
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Fragment fragment;
+                switch (menuItem.getItemId()) {
+                    case R.id.icon_backlog:
+                        fragment = new BacklogFragment();
+                        break;
+                    case R.id.icon_lap:
+                        fragment = new LapFragment();
+                        break;
+                    case R.id.icon_progress:
+                        fragment = new ProgressFragment();
+                        break;
+                    case R.id.icon_user:
+                        fragment = new UserFragment();
+                        break;
+
+                    default:
+                        fragment = new BacklogFragment();
+                        break;
+                }
+                fragmentManager.beginTransaction().replace(R.id.flContainer,fragment).commit();
+                return true;
+            }
+        });
 
     }
-
 
     //Query Data from the UserProfile
     private void queryUserProfile() {
