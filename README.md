@@ -134,7 +134,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 <img src="https://github.com/android-on-track/on-track/blob/master/designs/DatabaseSchema.PNG" width=600>
 
 ## Models
-#USER
+
 | Property Name | Type | Description  |
 | :---         |     :---:      |          ---: |
 | ObjectID PK  | String   | Main ID of user to be used Throughout the App    |
