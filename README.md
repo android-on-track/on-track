@@ -134,13 +134,75 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 <img src="https://github.com/android-on-track/on-track/blob/master/designs/DatabaseSchema.PNG" width=600>
 
 ## Models
-User
+# User 
 | Property Name | Type | Description  |
 | :---         |     :---:      |          ---: |
 | ObjectID PK  | String   | Main ID of user to be used Throughout the App    |
 | username     | String       | Username      |
 | password     | String       | password      |
 | Email     | String       | The user Email      |
+
+
+# UserProfile
+| Property Name | Type | Description  |
+| :---         |     :---:      |          ---: |
+| ObjectID PK	| String	| Unique ID for user Profile |
+| user FK	| Pointer	| Used to link the UserProfie to the user |
+| FirstName	| String	| The users first name |
+| LastName	| String	| The users last name |
+| About	| String	| Information about the user |
+| Title	| String	 | what are the user's occupation  |
+| TaskCompleted	| Number	 |Number of Laps the user has Completed |
+| Points	| Number	| Total number of points earned by the user |
+| ProfilePic	 | File	  | user Profile Pic |
+
+
+# BackLog
+| Property Name | Type | Description  |
+| :---         |     :---:      |          ---: |
+| ObjectID PK	| String |	Unique ID for BackLog used to connect Lap |
+| user FK	| Pointer |	Used to link the BackLog to the user |
+| NumOfTask	| Number |	Number of Laps currently in the BackLog |
+| NumOfCompleted	| Number |	Number of Laps Completed |
+
+
+# Lap
+| Property Name | Type | Description  |
+| :---         |     :---:      |          ---: |
+| ObjectID PK |	String |	Unique ID for Lap used to connect LapFile and Baton |
+| BackLog |	Pointer |	Used to link the Lap to the BackLog | 
+| Name |	String |	Lap name |
+| Description |	String |	Description of what the lap is about |
+| Priority |	String |	The level of importance of the lap |
+| BatonCount |	Number |	Numbe of batons in the lap |
+| BatonCompleted |	Number |	Number of Batons Completed |
+| TotalPoints |	Number | The total amount of points the user can earn in the lap |
+| FileCount |	Number |	The number of files attached to the Lap |
+| DateSet |	Date |	The amount of time to complete the lap |
+| Completed | 	Boolean |	Used to know if the lap has been completed |
+
+
+# LapFile
+| Property Name | Type | Description  |
+| :---         |     :---:      |          ---: |
+| ObjectID PK	| String |	Unique ID for LapFile |
+| Lap FK	| Pointer |	Used to link the LapFile to the Lap |
+| Image	| File |	Contains the Image |
+
+
+# Baton
+| Property Name | Type | Description  |
+| :---         |     :---:      |          ---: |
+| ObjectID PK |	String |	Unique ID for Baton |
+| Lap FK |	Pointer |	Used to link the Baton to the Lap |
+| Name |	String |	Name of the baton |
+| Description |	String |	Describe what the objective is |
+| Priority |	String |	The level of importance of the baton |
+| Points |	Number |	Number of points the baton contains |
+| Completed | 	Boolean |	Used to know if the baton has been completed |
+
+
+
 
 ## Networking
 - [Add list of network requests by screen ]
