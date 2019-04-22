@@ -131,7 +131,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 
 ## Schema 
-[This section will be completed in Unit 9]
+<img src="https://github.com/android-on-track/on-track/blob/master/designs/DatabaseSchema.PNG" width=600>
 ### Models
 [Add table of models]
 ### Networking
