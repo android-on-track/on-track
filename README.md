@@ -234,7 +234,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
         ```swift
         ParseQuery<Lap> parseQuery = new ParseQuery<>(Lap.class);
         parseQuery.include(Lap.KEY_BACKLOG);
-        parseQuery.whereEqualTo(Lap.KEY_USER, ParseUser.getCurrentUser());
+        parseQuery.whereEqualTo(Lap.KEY_BACKLOG, getCurrentBackLog());
         parseQuery.findInBackground(new FindCallback<Lap>() {
             @Override
             public void done(List<Lap> ParsedItems, ParseException e) {
@@ -255,7 +255,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
         ```swift
         ParseQuery<Lap> parseQuery = new ParseQuery<>(Lap.class);
         parseQuery.include(Lap.KEY_BACKLOG);
-        parseQuery.whereEqualTo(Lap.KEY_USER, ParseUser.getCurrentUser());
+        parseQuery.whereEqualTo(Lap.KEY_BACKLOG, getCurrentBackLog());
         parseQuery.findInBackground(new FindCallback<Lap>() {
             @Override
             public void done(List<Lap> ParsedItems, ParseException e) {
@@ -275,7 +275,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
       - (GET) get UserProfile object data such as TotalPoints/IncompletedBatons/CompletedBaton
         ```swift
         ParseQuery<UserProfile> parseQuery = new ParseQuery<>(UserProfile.class);
-        parseQuery.include(UserProfile.KEY_BACKLOG);
+        parseQuery.include(UserProfile.KEY_USER);
         parseQuery.whereEqualTo(UserProfile.KEY_USER, ParseUser.getCurrentUser());
         parseQuery.findInBackground(new FindCallback<UserProfile>() {
             @Override
