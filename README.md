@@ -205,6 +205,89 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 
 ## Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+#### List of network requests by screen
+   - BackLog Feed Screen
+      - (Read/GET) Query all laps of user in the backlog
+         ```swift
+        ParseQuery<BackLog> parseQuery = new ParseQuery<>(BackLog.class);
+        parseQuery.include(BackLog.KEY_USER);
+        parseQuery.whereEqualTo(BackLog.KEY_USER, ParseUser.getCurrentUser());
+        parseQuery.findInBackground(new FindCallback<BackLog>() {
+            @Override
+            public void done(List<BackLog> ParsedItems, ParseException e) {
+                if(e != null) {
+                    Log.e("XPARSE", "ERRROR");
+                    e.printStackTrace();
+                    return;
+                }
+                //Get Data
+            }
+        });
+         ```
+      - (Create/POST) Create a new lap
+      - (Delete) Delete Lap
+      - (GET) Get number of laps and number of completed laps
+      
+   - Create Lap Screen
+      - (Create/POST) Create a new lap object
+        ```swift
+        ParseQuery<Lap> parseQuery = new ParseQuery<>(Lap.class);
+        parseQuery.include(Lap.KEY_BACKLOG);
+        parseQuery.whereEqualTo(Lap.KEY_BACKLOG, getCurrentBackLog());
+        parseQuery.findInBackground(new FindCallback<Lap>() {
+            @Override
+            public void done(List<Lap> ParsedItems, ParseException e) {
+                if(e != null) {
+                    Log.e("XPARSE", "ERRROR");
+                    e.printStackTrace();
+                    return;
+                }
+                //Get Data
+            }
+        });
+        ```
+      - (Create/POST) Create name/points/description/etc////
+      - (GET) Get data and update the screen       
+        
+   - Lap Screen
+      - (GET) get lap object data
+        ```swift
+        ParseQuery<Lap> parseQuery = new ParseQuery<>(Lap.class);
+        parseQuery.include(Lap.KEY_BACKLOG);
+        parseQuery.whereEqualTo(Lap.KEY_BACKLOG, getCurrentBackLog());
+        parseQuery.findInBackground(new FindCallback<Lap>() {
+            @Override
+            public void done(List<Lap> ParsedItems, ParseException e) {
+                if(e != null) {
+                    Log.e("XPARSE", "ERRROR");
+                    e.printStackTrace();
+                    return;
+                }
+                //Get Data
+            }
+        });
+        ```
+      - (PUT) Update Data of Lap Description/Priority/etc...
+      - (DELETE) Delete Lap/File   
+        
+   - Progress Screen
+      - (GET) get UserProfile object data such as TotalPoints/IncompletedBatons/CompletedBaton
+        ```swift
+        ParseQuery<UserProfile> parseQuery = new ParseQuery<>(UserProfile.class);
+        parseQuery.include(UserProfile.KEY_USER);
+        parseQuery.whereEqualTo(UserProfile.KEY_USER, ParseUser.getCurrentUser());
+        parseQuery.findInBackground(new FindCallback<UserProfile>() {
+            @Override
+            public void done(List<UserProfile> ParsedItems, ParseException e) {
+                if(e != null) {
+                    Log.e("XPARSE", "ERRROR");
+                    e.printStackTrace();
+                    return;
+                }
+                //Get Data
+            }
+        });
+        ```
+
+
