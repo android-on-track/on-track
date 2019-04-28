@@ -9,13 +9,19 @@ import com.parse.ParseUser;
 
 @ParseClassName("BackLog")
 public class BackLog extends ParseObject{
+    public static final String KEY_OBJECTID = "objectID"; //NEW
     public static final String KEY_USER = "user";
-    public static final String KEY_NAME = "Name";
-    public static final String KEY_Completed = "Completed";
     public static final String KEY_NumofTask = "NumofTask";
     public static final String KEY_NumofCompleted = "NumOfCompleted";
-    public static final String KEY_OBJECTID = "objectId";
 
+    //objectID
+    public String getobjectID(){
+        return getString(KEY_OBJECTID);
+    }
+
+    public void setobjectID(String objectID){
+        put(KEY_OBJECTID, objectID);
+    }
 
     //User
     public ParseUser getUser(){
@@ -26,23 +32,6 @@ public class BackLog extends ParseObject{
         put(KEY_USER, parseUser);
     }
 
-    //Name
-    public String getName(){
-        return getString(KEY_NAME);
-    }
-
-    public void setName(String Name){
-        put(KEY_NAME, Name);
-    }
-
-    //Completed
-    public Boolean getCompleted(){
-        return getBoolean(KEY_Completed);
-    }
-
-    public void setCompleted(Boolean Completed){
-        put(KEY_Completed, Completed);
-    }
 
     //NumofTask
     public int getNumofTask(){
@@ -62,11 +51,4 @@ public class BackLog extends ParseObject{
     public void setNumofCompleted(int NumofCompleted){
         put(KEY_NumofCompleted, NumofCompleted);
     }
-
-    //objectId
-    public String getobjectId(){
-        return getString(KEY_NumofCompleted);
-    }
-
-
 }

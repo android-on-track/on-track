@@ -9,15 +9,16 @@ import com.parse.ParseUser;
 @ParseClassName("UserProfile")
 public class UserProfile extends ParseObject {
 
-    public static final String KEY_USER = "user";
     public static final String KEY_OBJECTID = "objectID";
+    public static final String KEY_USER = "user";
     public static final String KEY_FIRSTNAME = "FirstName";
     public static final String KEY_LASTNAME = "LastName";
-    public static final String KEY_PROFILEPIC = "ProfilePic";
-    public static final String KEY_POINTS = "Points";
-    public static final String KEY_TASKCOMPLETED = "TaskCompleted";
     public static final String KEY_ABOUT = "About";
     public static final String KEY_TITLE = "Title";
+    public static final String KEY_TASKCOMPLETED = "TaskCompleted";
+    public static final String KEY_POINTS = "Points";
+    public static final String KEY_PROFILEPIC = "ProfilePic";
+
 
     //User
     public ParseUser getUser(){

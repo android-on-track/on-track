@@ -7,58 +7,31 @@ import com.parse.ParseUser;
 
 @ParseClassName("Baton")
 public class Baton extends ParseObject {
-    public static final String KEY_USER = "user";
-    public static final String KEY_BackLogID = "BackLogID";
-    public static final String KEY_Points = "Points";
-    public static final String KEY_Pic = "Pic";
-    public static final String KEY_Completed = "Completed";
+    public static final String KEY_OBJECTID = "objectID"; //NEW
+    public static final String KEY_LAP = "Lap";  //NEW
     public static final String KEY_Name = "Name";
-    public static final String KEY_NumofDays = "NumofDays";
     public static final String KEY_Description = "Description";
+    public static final String KEY_Priority = "Priority"; //NEW
+    public static final String KEY_Points = "Points";
+    public static final String KEY_Completed = "Completed";
 
-    //User
-    public ParseUser getUser(){
-        return getParseUser(KEY_USER);
+
+    //objectID
+    public String getobjectID(){
+        return getString(KEY_OBJECTID);
     }
 
-    public void setUser(ParseUser parseUser){
-        put(KEY_USER, parseUser);
+    public void setobjectID(String objectID){
+        put(KEY_OBJECTID, objectID);
     }
 
-    //BackLogID
-    public ParseObject getBackLogID(){
-        return getParseObject(KEY_BackLogID);
+    //Lap
+    public ParseObject getLap(){
+        return getParseObject(KEY_LAP);
     }
 
-    public void setBackLogID(String BackLogID){
-        put(KEY_BackLogID, BackLogID);
-    }
-
-    //Points
-    public int getPoints(){
-        return getInt(KEY_Points);
-    }
-
-    public void setPoints(int Points){
-        put(KEY_Points, Points);
-    }
-
-    //Pic
-    public ParseFile getPic(){
-        return getParseFile(KEY_Pic);
-    }
-
-    public void setPic(ParseFile parseFile){
-        put(KEY_Pic, parseFile);
-    }
-
-    //Completed
-    public Boolean getCompleted(){
-        return getBoolean(KEY_Completed);
-    }
-
-    public void setCompleted(Boolean Completed){
-        put(KEY_Completed, Completed);
+    public void setLap(ParseObject Lap){
+        put(KEY_LAP, Lap);
     }
 
     //Name
@@ -71,15 +44,6 @@ public class Baton extends ParseObject {
     }
 
 
-    //NumofDays
-    public int getNumofDays(){
-        return getInt(KEY_NumofDays);
-    }
-
-    public void setNumofDays(int NumofDays){
-        put(KEY_NumofDays, NumofDays);
-    }
-
     //Description
     public String getDescription(){
         return getString(KEY_Description);
@@ -89,6 +53,31 @@ public class Baton extends ParseObject {
         put(KEY_Description, Description);
     }
 
+
+    //Priority
+    public String getPriority() { return getString(KEY_Priority); }
+
+    public void setPriority(String Priority) { put(KEY_Priority, Priority);}
+
+
+    //Points
+    public int getPoints(){
+        return getInt(KEY_Points);
+    }
+
+    public void setPoints(int Points){
+        put(KEY_Points, Points);
+    }
+
+
+    //Completed
+    public Boolean getCompleted(){
+        return getBoolean(KEY_Completed);
+    }
+
+    public void setCompleted(Boolean Completed){
+        put(KEY_Completed, Completed);
+    }
 
 
 }
