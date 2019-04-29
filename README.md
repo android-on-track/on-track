@@ -32,6 +32,13 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 - [] * Camera to add photos to checkpoints
 - [] * Create data visualisations of completed tasks
 
+**User Stories completed**
+- [x] * User is able to sign up and login
+- [x] * User is able to nagivate through different fragments 
+- [] * User profile can be seen in the login Fragment
+- [] * User can see all the batons created in the backlog Fragment
+- [] * User is able to add batons in the lap Fragment
+
 **Optional Nice-to-have Stories**
 
 * Location-tracking
@@ -40,6 +47,12 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 * Alert of a new baton coming in
 * See friend's profile
 * Compare completed batons
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### 2. Screen Archetypes
 
