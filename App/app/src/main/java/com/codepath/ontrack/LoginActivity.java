@@ -10,9 +10,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.codepath.ontrack.Parse.BackLog;
+import com.parse.FindCallback;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
+
+import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
@@ -44,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-      //  checkUser();
+
 
     }
 
@@ -74,4 +79,6 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+
 }

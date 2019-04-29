@@ -9,10 +9,10 @@ import com.parse.ParseUser;
 
 @ParseClassName("BackLog")
 public class BackLog extends ParseObject{
-    public static final String KEY_OBJECTID = "objectID"; //NEW
+    public static final String KEY_OBJECTID = "objectId"; //NEW
     public static final String KEY_USER = "user";
     public static final String KEY_NumofTask = "NumofTask";
-    public static final String KEY_NumofCompleted = "NumOfCompleted";
+    public static final String KEY_NumofCompleted = "NumofCompleted";
 
     //objectID
     public String getobjectID(){

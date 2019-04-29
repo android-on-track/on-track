@@ -9,7 +9,7 @@ import com.parse.ParseUser;
 @ParseClassName("UserProfile")
 public class UserProfile extends ParseObject {
 
-    public static final String KEY_OBJECTID = "objectID";
+    public static final String KEY_OBJECTID = "objectId";
     public static final String KEY_USER = "user";
     public static final String KEY_FIRSTNAME = "FirstName";
     public static final String KEY_LASTNAME = "LastName";
@@ -19,16 +19,6 @@ public class UserProfile extends ParseObject {
     public static final String KEY_POINTS = "Points";
     public static final String KEY_PROFILEPIC = "ProfilePic";
 
-
-    //User
-    public ParseUser getUser(){
-        return getParseUser(KEY_USER);
-    }
-
-    public void setUser(ParseUser parseUser){
-        put(KEY_USER, parseUser);
-    }
-
     //objectID
     public String getobjectID(){
         return getString(KEY_OBJECTID);
@@ -36,6 +26,16 @@ public class UserProfile extends ParseObject {
 
     public void setobjectID(String objectID){
         put(KEY_OBJECTID, objectID);
+    }
+
+
+    //User
+    public ParseObject getUser(){
+        return getParseObject(KEY_USER);
+    }
+
+    public void setUser(ParseObject parseUser){
+        put(KEY_USER, parseUser);
     }
 
 
@@ -57,33 +57,6 @@ public class UserProfile extends ParseObject {
         put(KEY_LASTNAME, LastName);
     }
 
-    //ProfilePic
-    public ParseFile getProfilePic(){
-        return getParseFile(KEY_PROFILEPIC);
-    }
-
-    public void setProfilePic(ParseFile parseFile){
-        put(KEY_PROFILEPIC, parseFile);
-    }
-
-    //Points
-    public int getPoints(){
-        return getInt(KEY_POINTS);
-    }
-
-    public void setPoints(int Points){
-        put(KEY_POINTS, Points);
-    }
-
-    //TaskCompleted
-    public int getTaskCompleted(){
-        return getInt(KEY_TASKCOMPLETED);
-    }
-
-    public void setTaskCompleted(int TaskCompleted){
-        put(KEY_TASKCOMPLETED, TaskCompleted);
-    }
-
     //About
     public String getAbout(){
         return getString(KEY_ABOUT);
@@ -101,4 +74,35 @@ public class UserProfile extends ParseObject {
     public void setTitle(String Title){
         put(KEY_TITLE, Title);
     }
+
+
+    //TaskCompleted
+    public int getTaskCompleted(){
+        return getInt(KEY_TASKCOMPLETED);
+    }
+
+    public void setTaskCompleted(int TaskCompleted){
+        put(KEY_TASKCOMPLETED, TaskCompleted);
+    }
+
+
+    //Points
+    public int getPoints(){
+        return getInt(KEY_POINTS);
+    }
+
+    public void setPoints(int Points){
+        put(KEY_POINTS, Points);
+    }
+
+
+    //ProfilePic
+    public ParseFile getProfilePic(){
+        return getParseFile(KEY_PROFILEPIC);
+    }
+
+    public void setProfilePic(ParseFile parseFile){
+        put(KEY_PROFILEPIC, parseFile);
+    }
+
 }

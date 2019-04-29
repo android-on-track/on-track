@@ -4,10 +4,12 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import java.util.Date;
+
 @ParseClassName("Lap")
 public class Lap extends ParseObject{
-    public static final String KEY_OBJECTID = "objectID";
-    public static final String KEY_Backlog = "Backlog";
+    public static final String KEY_OBJECTID = "objectId";
+    public static final String KEY_Backlog = "BackLog";
     public static final String KEY_Name = "Name";
     public static final String KEY_Description = "Description";
     public static final String KEY_Priority = "Priority";
@@ -96,8 +98,8 @@ public class Lap extends ParseObject{
     }
 
     //DateSet
-    public String getDateSet(){
-        return getString(KEY_DateSet);
+    public Date getDateSet(){
+        return getDate(KEY_DateSet);
     }
 
     public void setDateSet(String DateSet){

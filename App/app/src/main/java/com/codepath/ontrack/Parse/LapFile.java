@@ -7,7 +7,7 @@ import com.parse.ParseUser;
 @ParseClassName("LapFile")
 public class LapFile extends ParseObject {
 
-    public static final String KEY_OBJECTID = "objectID";
+    public static final String KEY_OBJECTID = "objectId";
     public static final String KEY_Lap = "Lap";
     public static final String KEY_Image = "Image";
 

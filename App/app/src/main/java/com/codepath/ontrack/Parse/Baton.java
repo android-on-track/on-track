@@ -7,7 +7,7 @@ import com.parse.ParseUser;
 
 @ParseClassName("Baton")
 public class Baton extends ParseObject {
-    public static final String KEY_OBJECTID = "objectID"; //NEW
+    public static final String KEY_OBJECTID = "objectId"; //NEW
     public static final String KEY_LAP = "Lap";  //NEW
     public static final String KEY_Name = "Name";
     public static final String KEY_Description = "Description";
