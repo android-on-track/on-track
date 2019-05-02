@@ -125,20 +125,20 @@ Here's a walkthrough of implemented user stories:
 
 
 ### Digital Wireframes & Mockups
-<img src="designs/Updated-Frames/Backlog.png" width=300>
-<img src="designs/Updated-Frames/Add Batons to Checkpoint/ Dialog box.png" width=300>
+<img src="designs/Updated-Frames/Backlog.jpg" width=300>
+<img src="designs/Updated-Frames/Add Batons to Checkpoint Dialog box.png" width=300>
 <img src="designs/Updated-Frames/SetLap.png" width=300>
-<img src="designs/Updated-Frames/Add Batons to Checkpoint.png" width=300>
-<img src="designs/Updated-Frames/Backlog Add Checkpoint.png" width=300>
+<img src="designs/Updated-Frames/Add Batons to Checkpoint.jpg" width=300>
+<img src="designs/Updated-Frames/Backlog Add Checkpoint.jpg" width=300>
 <img src="designs/Updated-Frames/This Lap.png" width=300>
 <img src="designs/Updated-Frames/This Lap with dialog box.png" width=300>
-<img src="designs/Updated-Frames/Camera.png" width=300>
-<img src="designs/Updated-Frames/Lap Time.png" width=300>
-<img src="designs/Updated-Frames/Lap Complete.png" width=300>
-<img src="designs/Updated-Frames/Replay.png" width=300>
-<img src="designs/Updated-Frames/Medals.png" width=300>
+<img src="designs/Updated-Frames/Camera.jpg" width=300>
+<img src="designs/Updated-Frames/Lap Time.jpg" width=300>
+<img src="designs/Updated-Frames/Lap Complete.jpg" width=300>
+<img src="designs/Updated-Frames/Replay.jpg" width=300>
+<img src="designs/Updated-Frames/Medals.jpg" width=300>
 <img src="designs/Updated-Frames/Coaches Comments.png" width=300>
-<img src="designs/Updated-Frames/Reflection.png" width=300>
+<img src="designs/Updated-Frames/Reflection.jpg" width=300>
 
 
 
