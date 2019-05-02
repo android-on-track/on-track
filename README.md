@@ -126,7 +126,7 @@ Here's a walkthrough of implemented user stories:
 
 ### Digital Wireframes & Mockups
 <img src="designs/Updated-Frames/Backlog.jpg" width=300>
-<img src="designs/Updated-Frames/Add Batons to Checkpoint Dialog box.png" width=300>
+<img src="designs/Updated-Frames/Add Batons to Checkpoint Dialog box.jpg" width=300>
 <img src="designs/Updated-Frames/SetLap.png" width=300>
 <img src="designs/Updated-Frames/Add Batons to Checkpoint.jpg" width=300>
 <img src="designs/Updated-Frames/Backlog Add Checkpoint.jpg" width=300>
