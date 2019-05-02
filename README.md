@@ -41,12 +41,12 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 **Optional Nice-to-have Stories**
 
-* Location-tracking
-* Social connection
-* Send baton as a way to collaborate with another user
-* Alert of a new baton coming in
-* See friend's profile
-* Compare completed batons
+- [ ] Location-tracking
+- [ ] Social connection
+- [ ] Send baton as a way to collaborate with another user
+- [ ] Alert of a new baton coming in
+- [ ] See friend's profile
+- [ ] Compare completed batons
 
 ## Gif Walkthrough
 
