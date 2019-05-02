@@ -23,21 +23,21 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
+### 1. User Stories
 
 **Required Must-have Stories**
 
-- [x] * Database keeping track of users, checkpoints (high-level tasks), and batons (lower-level breakdown of tasks)
-- [] * Push notifications for reminders to complete tasks
-- [] * Camera to add photos to checkpoints
-- [] * Create data visualisations of completed tasks
+- [x] Database keeping track of users, checkpoints (high-level tasks), and batons (lower-level breakdown of tasks)
+- [ ] Push notifications for reminders to complete tasks
+- [ ] Camera to add photos to checkpoints
+- [ ] Create data visualisations of completed tasks
 
 **User Stories completed**
-- [x] * User is able to sign up and login
-- [x] * User is able to nagivate through different fragments 
-- [] * User profile can be seen in the login Fragment
-- [] * User can see all the batons created in the backlog Fragment
-- [] * User is able to add batons in the lap Fragment
+- [x] User is able to sign up and login
+- [x] User is able to nagivate through different fragments 
+- [ ] User profile can be seen in the login Fragment
+- [ ] User can see all the batons created in the backlog Fragment
+- [ ] User is able to add batons in the lap Fragment
 
 **Optional Nice-to-have Stories**
 
@@ -48,7 +48,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 * See friend's profile
 * Compare completed batons
 
-## Video Walkthrough
+## Gif Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
