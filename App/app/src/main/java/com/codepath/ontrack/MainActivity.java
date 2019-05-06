@@ -52,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         //tv1 = findViewById(R.id.tv1);
         final FragmentManager fragmentManager = getSupportFragmentManager();
+        if (savedInstanceState == null ) {
+            toolbar.setTitle("Backlog");
+            Fragment fragment = new BacklogFragment();
+            fragmentManager.beginTransaction().replace(R.id.flContainer,fragment).commit();
+
+        }
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -75,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     default:
+                        toolbar.setTitle("Backlog");
                         fragment = new BacklogFragment();
                         break;
                 }

@@ -45,17 +45,11 @@ public class BacklogFragment extends Fragment {
         swipeContainer = view.findViewById(R.id.SwipeContainer);
 
         rvLaps = view.findViewById(R.id.rvLaps);
-
         mLaps = new ArrayList<>();
-
         adapter = new BacklogAdapter(getContext(), mLaps, "PostsFragment");
-
         rvLaps.setAdapter(adapter);
-
-
         rvLaps.setLayoutManager(new LinearLayoutManager(getContext()));
         queryLap();
-
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
