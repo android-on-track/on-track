@@ -1,12 +1,15 @@
 package com.codepath.ontrack;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -20,7 +23,6 @@ import com.codepath.ontrack.Parse.Lap;
 import com.codepath.ontrack.Parse.LapFile;
 import com.codepath.ontrack.Parse.UserProfile;
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tv1;
     private BottomNavigationView bottomNavigationView;
-
+    private Toolbar toolbar;
     private ParseObject BackLogObject;
     private String BackLogID = "";
     private String LapID = "";
@@ -41,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("Backlog");
+        setSupportActionBar(toolbar);
+
+
 
         //tv1 = findViewById(R.id.tv1);
         final FragmentManager fragmentManager = getSupportFragmentManager();
@@ -50,15 +58,19 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (menuItem.getItemId()) {
                     case R.id.icon_backlog:
+                        toolbar.setTitle("Backlog");
                         fragment = new BacklogFragment();
                         break;
                     case R.id.icon_lap:
+                        toolbar.setTitle("Lap");
                         fragment = new LapFragment();
                         break;
                     case R.id.icon_progress:
+                        toolbar.setTitle("Progress");
                         fragment = new ProgressFragment();
                         break;
                     case R.id.icon_user:
+                        toolbar.setTitle("User Profile");
                         fragment = new UserFragment();
                         break;
 
@@ -82,6 +94,12 @@ public class MainActivity extends AppCompatActivity {
         //queryBaton();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu, this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
+    }
 
     //Query Data from the UserProfile
     private void queryUserProfile() {
