@@ -35,4 +35,7 @@ dependencies {
     // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
     implementation 'com.android.support:gridlayout-v7:28.0.0'
+
+    //Used for progressbar
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
 }

@@ -30,11 +30,11 @@ public class UserProfile extends ParseObject {
 
 
     //User
-    public ParseObject getUser(){
-        return getParseObject(KEY_USER);
+    public ParseUser getUser(){
+        return getParseUser(KEY_USER);
     }
 
-    public void setUser(ParseObject parseUser){
+    public void setUser(ParseUser parseUser){
         put(KEY_USER, parseUser);
     }
 

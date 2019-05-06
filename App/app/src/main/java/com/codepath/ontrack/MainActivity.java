@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         //USED TO DEBUG DATABASE DATA
         //
         //queryUserProfile();
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         //queryLapFile();
         //queryBaton();
     }
+
 
     //Query Data from the UserProfile
     private void queryUserProfile() {
