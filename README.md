@@ -28,6 +28,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 **Required Must-have Stories**
 
 - [x] Database keeping track of users, checkpoints (high-level tasks), and batons (lower-level breakdown of tasks)
+- [x] Backlog to hold laps created
 - [ ] Push notifications for reminders to complete tasks
 - [ ] Camera to add photos to checkpoints
 - [ ] Create data visualisations of completed tasks
@@ -52,7 +53,7 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthroughmay6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### 2. Screen Archetypes
 
