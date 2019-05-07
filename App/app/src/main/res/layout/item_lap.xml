@@ -2,144 +2,153 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RLayoutX"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
 
-    <ImageView
-        android:id="@+id/RLayoutX"
-        android:layout_width="388dp"
-        android:layout_height="225dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.473"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0"
+    android:elevation="50dp"
+    android:padding="8dp"
+    android:background="@drawable/border_item_lap">
+        <ImageView
+            android:id="@+id/ivPriorityColor"
 
-        android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+            android:layout_width="156dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/gradiantlow"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="8dp" />
 
-    <ImageView
-        android:id="@+id/ivPriorityColor"
-        android:layout_width="156dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gradiantlow" />
+        <TextView
+            android:id="@+id/tvPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="Priority "
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPriorityColor"
+            app:layout_constraintEnd_toEndOf="@+id/ivPriorityColor"
+            app:layout_constraintHorizontal_bias="0.186"
+            app:layout_constraintStart_toStartOf="@+id/ivPriorityColor"
+            app:layout_constraintTop_toTopOf="@+id/ivPriorityColor"
+            app:layout_constraintVertical_bias="0.439" />
 
-    <TextView
-        android:id="@+id/tvPriority"
-        android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:text="Priority "
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/ivPriorityColor"
-        app:layout_constraintEnd_toEndOf="@+id/ivPriorityColor"
-        app:layout_constraintHorizontal_bias="0.186"
-        app:layout_constraintStart_toStartOf="@+id/ivPriorityColor"
-        app:layout_constraintTop_toTopOf="@+id/ivPriorityColor"
-        app:layout_constraintVertical_bias="0.439" />
+        <TextView
+            android:id="@+id/tvLapDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="This is where the lap descrition is located"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/RLayoutX"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPriorityColor" />
 
-    <TextView
-        android:id="@+id/tvLapDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="This is where the lap descrition is located"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/RLayoutX"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="@+id/RLayoutX"
-        app:layout_constraintTop_toBottomOf="@+id/ivPriorityColor" />
+        <TextView
+            android:id="@+id/tvLapPoints"
+            android:layout_width="38dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="10"
+            android:textAlignment="textEnd"
+            android:textColor="#1E81EB"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ivPriorityColor"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvLapPoints"
-        android:layout_width="38dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="44dp"
-        android:text="10"
-        android:textAlignment="textEnd"
-        android:textColor="#1E81EB"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/RLayoutX"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvPointsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="points"
+            android:textColor="#1E81EB"
+            app:layout_constraintBottom_toTopOf="@+id/btnProfileiBacklog"
+            app:layout_constraintEnd_toEndOf="@+id/RLayoutX"
+            app:layout_constraintTop_toBottomOf="@+id/tvLapPoints" />
 
-    <TextView
-        android:id="@+id/tvPointsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
-        android:text="points"
-        android:textColor="#1E81EB"
-        app:layout_constraintEnd_toEndOf="@+id/RLayoutX"
-        app:layout_constraintTop_toBottomOf="@+id/tvLapPoints" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnAddLap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            app:backgroundTint="#207CC7"
+            app:fabCustomSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnProfileiBacklog"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toEndOf="@+id/tvFilecount"
+            app:srcCompat="@drawable/ic_plus" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnAddLap"
-        android:layout_width="54dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="12dp"
-        android:clickable="true"
-        android:src="@android:drawable/ic_menu_add"
-        app:backgroundTint="#207CC7"
-        app:layout_constraintBottom_toBottomOf="@+id/RLayoutX"
-        app:layout_constraintEnd_toEndOf="@+id/RLayoutX" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnProfileiBacklog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:scaleType="center"
+            app:backgroundTint="#207BC6"
+            app:fabCustomSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_account" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnProfileiBacklog"
-        android:layout_width="51dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="12dp"
-        android:clickable="true"
-        app:backgroundTint="#207BC6"
-        app:layout_constraintBottom_toBottomOf="@+id/RLayoutX"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/xdefualtuser" />
+        <ImageView
+            android:id="@+id/ivLapIcon"
+            android:layout_width="27dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/RLayoutX"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLapDescription"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
-    <ImageView
-        android:id="@+id/ivLapIcon"
-        android:layout_width="27dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/RLayoutX"
-        app:layout_constraintStart_toStartOf="@+id/RLayoutX"
-        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+        <ImageView
+            android:id="@+id/ivFileIcon"
+            android:layout_width="27dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLapCount"
+            app:layout_constraintStart_toEndOf="@+id/tvLapCount"
+            app:srcCompat="@android:drawable/ic_input_get" />
 
-    <ImageView
-        android:id="@+id/ivFileIcon"
-        android:layout_width="27dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvLapCount"
-        app:layout_constraintStart_toEndOf="@+id/tvLapCount"
-        app:srcCompat="@android:drawable/ic_input_get" />
+        <TextView
+            android:id="@+id/tvLapCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="10"
+            app:layout_constraintBottom_toBottomOf="@+id/ivLapIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivLapIcon" />
 
-    <TextView
-        android:id="@+id/tvLapCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="10"
-        app:layout_constraintBottom_toBottomOf="@+id/ivLapIcon"
-        app:layout_constraintStart_toEndOf="@+id/ivLapIcon" />
-
-    <TextView
-        android:id="@+id/tvFilecount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="10"
-        app:layout_constraintBottom_toBottomOf="@+id/ivFileIcon"
-        app:layout_constraintStart_toEndOf="@+id/ivFileIcon" />
+        <TextView
+            android:id="@+id/tvFilecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="10"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFileIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivFileIcon" />
+    />
 
 </android.support.constraint.ConstraintLayout>
