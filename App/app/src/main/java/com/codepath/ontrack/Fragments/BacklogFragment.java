@@ -49,6 +49,8 @@ public class BacklogFragment extends Fragment {
         adapter = new BacklogAdapter(getContext(), mLaps, "PostsFragment");
         rvLaps.setAdapter(adapter);
         rvLaps.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
         queryLap();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -104,16 +106,6 @@ public class BacklogFragment extends Fragment {
                 Log.d("XPARSE", Integer.toString(ParsedItems.size()) + "Lap");
                 for(int i = 0; i < ParsedItems.size(); i++) {
                     Lap userP = ParsedItems.get(i);
-                    Log.d("XPARSE", userP.getBacklog().toString());
-                    Log.d("XPARSE", userP.getName());
-                    Log.d("XPARSE", userP.getDescription());
-                    Log.d("XPARSE", userP.getPriority());
-                    Log.d("XPARSE", Integer.toString(userP.getBatonCount()));
-                    Log.d("XPARSE", Integer.toString(userP.getBatonCompleted()));
-                    Log.d("XPARSE", Integer.toString(userP.getTotalPoints()));
-                    Log.d("XPARSE", Integer.toString(userP.getFileCount()));
-                    Log.d("XPARSE", userP.getDateSet().toString());
-                    Log.d("XPARSE", userP.getCompleted().toString());
                 }
                 swipeContainer.setRefreshing(false);
             }

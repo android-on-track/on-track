@@ -38,4 +38,5 @@ dependencies {
 
     //Used for progressbar
     implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    implementation 'com.mikhaellopez:circularprogressbar:2.0.0'
 }

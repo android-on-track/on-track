@@ -3,18 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:custom="http://schemas.android.com.github.lzyzsd.circleprogress.DonutProgress"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/gradientprogress"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvTextTotallaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif"
-        android:text="Lap time remaining:"
+        android:text="Total Laps: "
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,19 +23,87 @@
 
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvTextTotalCompLaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif"
-        android:text="You have remaining:"
+        android:text="Total Laps Completed:"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTextTotallaps" />
+
+    <TextView
+        android:id="@+id/tvTotalLaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTextTotallaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toEndOf="@+id/tvTextTotallaps"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvTotLapsComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTextTotalCompLaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toEndOf="@+id/tvTextTotalCompLaps"
+        app:layout_constraintTop_toTopOf="@+id/tvTextTotalCompLaps"
+        app:layout_constraintVertical_bias="0.0" />
 
 
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressCircleX"
+        android:layout_width="308dp"
+        android:layout_height="344dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cpb_background_progressbar_color="#F7F2F8"
+        app:cpb_background_progressbar_width="20dp"
+        app:cpb_progress="0"
+        app:cpb_progress_max="100"
+        app:cpb_progressbar_color="#017CFF"
+        app:cpb_progressbar_width="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextTotalCompLaps"
+        app:layout_constraintVertical_bias="0.554" />
+
+    <TextView
+        android:id="@+id/tvProgressPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
+        android:textColor="@android:color/background_light"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressCircleX"
+        app:layout_constraintEnd_toEndOf="@+id/progressCircleX"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/progressCircleX"
+        app:layout_constraintTop_toTopOf="@+id/progressCircleX"
+        app:layout_constraintVertical_bias="0.504" />
 
 
 </android.support.constraint.ConstraintLayout>
