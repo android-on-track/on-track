@@ -34,12 +34,14 @@ import java.util.List;
 public class BacklogFragment extends Fragment {
 
     private RecyclerView rvLaps;
-    private FloatingActionButton floatingActionButton;
-    private Dialog dialog;
-    private Button btn_addBaton;
-    private ImageView btn_close;
+    private FloatingActionButton fab_add_checkpoint;
+
+    private Dialog dialog_add_checkpoint;
+    private Button btn_add_checkpoint;
+    private ImageView btn_close_checkpoint;
     protected BacklogAdapter adapter;
-    private TextView etDescrption;
+    private TextView tv_weight;
+    private TextView et_checkpoint_description;
     protected List<Lap> mLaps;
     private String BackLogID = "";
 
@@ -55,10 +57,11 @@ public class BacklogFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         getBackLogID();
         swipeContainer = view.findViewById(R.id.SwipeContainer);
-        floatingActionButton = view.findViewById(R.id.fa_btn);
-        etDescrption = view.findViewById(R.id.etDescription);
+        fab_add_checkpoint = view.findViewById(R.id.fab_add_checkpoint);
+        et_checkpoint_description = view.findViewById(R.id.et_checkpoint_description);
         rvLaps = view.findViewById(R.id.rvLaps);
-        dialog = new Dialog(getContext());
+        tv_weight = view.findViewById(R.id.tv_weight);
+        dialog_add_checkpoint = new Dialog(getContext());
         mLaps = new ArrayList<>();
         adapter = new BacklogAdapter(getContext(), mLaps, "PostsFragment");
         rvLaps.setAdapter(adapter);
@@ -71,34 +74,32 @@ public class BacklogFragment extends Fragment {
             }
         });
 
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+        fab_add_checkpoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.setContentView(R.layout.add_baton);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                btn_addBaton = dialog.findViewById(R.id.btn_newBaton);
-                btn_close = dialog.findViewById(R.id.btn_close);
-                btn_close.setOnClickListener(new View.OnClickListener() {
+                dialog_add_checkpoint.setContentView(R.layout.add_checkpoint);
+                dialog_add_checkpoint.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                btn_add_checkpoint = dialog_add_checkpoint.findViewById(R.id.btn_new_checkpoint);
+                btn_close_checkpoint = dialog_add_checkpoint.findViewById(R.id.btn_close_checkpoint);
+                btn_close_checkpoint.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        dialog.dismiss();
+                        dialog_add_checkpoint.dismiss();
                     }
                 });
-                btn_addBaton.setOnClickListener(new View.OnClickListener() {
+                btn_add_checkpoint.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // parse the baton
-                        // etDescription
+                        // parse the checkpoint
+                        // et_checkpoint_description
+                        // tv_weight
                         //
-                        //
-                        dialog.dismiss();   // closes the dialog after the button press
+                        dialog_add_checkpoint.dismiss();   // closes the dialog after the button press
                     }
                 });
-                dialog.show();
+                dialog_add_checkpoint.show();
             }
         });
-
-
 
     }
 

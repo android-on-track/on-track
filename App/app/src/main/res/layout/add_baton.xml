@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tv_new_baton_title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/gradianthigh"
@@ -23,7 +23,7 @@
             android:textSize="24sp"
             android:textStyle="bold" />
         <ImageView
-            android:id="@+id/btn_close"
+            android:id="@+id/btn_close_baton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -32,7 +32,7 @@
     </RelativeLayout>
 
     <EditText
-        android:id="@+id/etDescription"
+        android:id="@+id/et_baton_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -51,6 +51,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gradianthigh"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
         android:text="Add" />
+
 
 </LinearLayout>

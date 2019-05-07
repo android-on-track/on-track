@@ -1,22 +1,21 @@
 package com.codepath.ontrack;
+
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.codepath.ontrack.Fragments.BacklogFragment;
-import com.codepath.ontrack.Fragments.LapFragment;
-import com.codepath.ontrack.Fragments.ProgressFragment;
-import com.codepath.ontrack.Fragments.UserFragment;
 import com.codepath.ontrack.Parse.Lap;
-import com.parse.ParseFile;
-
-import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
@@ -57,12 +56,14 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
         private TextView tvPointsTitle;
         private TextView tvLapCount;
         private TextView tvFilecount;
-
+        private Button btn_add_baton;
+        private ImageView btn_close_baton;
         private ImageView ivPriorityColor;
         private ImageView ivLapIcon;
+        private TextView et_baton_description;
         private ImageView ivFileIcon;
-
-        private FloatingActionButton btnAddLap;
+        private Dialog dialog_add_baton;
+        private FloatingActionButton fab_add_baton;
         private FloatingActionButton btnProfileiBacklog;
 
 
@@ -75,13 +76,41 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
             tvPointsTitle = itemView.findViewById(R.id.tvPointsTitle);
             tvLapCount = itemView.findViewById(R.id.tvLapCount);
             tvFilecount = itemView.findViewById(R.id.tvFilecount);
-
+            btnProfileiBacklog = itemView.findViewById(R.id.fab_profile_backlog);
             ivPriorityColor = itemView.findViewById(R.id.ivPriorityColor);
             ivLapIcon = itemView.findViewById(R.id.ivLapIcon);
             ivFileIcon = itemView.findViewById(R.id.ivFileIcon);
+            et_baton_description = itemView.findViewById(R.id.et_baton_description);
 
-            btnAddLap = itemView.findViewById(R.id.btnAddLap);
-            btnProfileiBacklog = itemView.findViewById(R.id.btnProfileiBacklog);
+            fab_add_baton = itemView.findViewById(R.id.fab_add_baton);
+            fab_add_baton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog_add_baton = new Dialog(context);
+                    dialog_add_baton.setContentView(R.layout.add_baton);
+                    dialog_add_baton.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    btn_add_baton = dialog_add_baton.findViewById(R.id.btn_newBaton);
+                    btn_close_baton = dialog_add_baton.findViewById(R.id.btn_close_baton);
+                    btn_close_baton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog_add_baton.dismiss();
+                        }
+                    });
+                    btn_add_baton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // parse the baton
+                            // et_baton_description
+                            //
+                            //
+                            dialog_add_baton.dismiss();   // closes the dialog after the button press
+                        }
+                    });
+                    dialog_add_baton.show();
+                }
+            });
+
         }
 
         public void bind(Lap lapx){
