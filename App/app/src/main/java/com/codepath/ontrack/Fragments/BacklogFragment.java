@@ -1,8 +1,12 @@
 package com.codepath.ontrack.Fragments;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +15,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.codepath.ontrack.BacklogAdapter;
 import com.codepath.ontrack.Parse.BackLog;
@@ -27,7 +34,12 @@ import java.util.List;
 public class BacklogFragment extends Fragment {
 
     private RecyclerView rvLaps;
+    private FloatingActionButton floatingActionButton;
+    private Dialog dialog;
+    private Button btn_addBaton;
+    private ImageView btn_close;
     protected BacklogAdapter adapter;
+    private TextView etDescrption;
     protected List<Lap> mLaps;
     private String BackLogID = "";
 
@@ -43,14 +55,14 @@ public class BacklogFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         getBackLogID();
         swipeContainer = view.findViewById(R.id.SwipeContainer);
-
+        floatingActionButton = view.findViewById(R.id.fa_btn);
+        etDescrption = view.findViewById(R.id.etDescription);
         rvLaps = view.findViewById(R.id.rvLaps);
+        dialog = new Dialog(getContext());
         mLaps = new ArrayList<>();
         adapter = new BacklogAdapter(getContext(), mLaps, "PostsFragment");
         rvLaps.setAdapter(adapter);
         rvLaps.setLayoutManager(new LinearLayoutManager(getContext()));
-
-
         queryLap();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -58,6 +70,35 @@ public class BacklogFragment extends Fragment {
                 queryLap();
             }
         });
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.setContentView(R.layout.add_baton);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                btn_addBaton = dialog.findViewById(R.id.btn_newBaton);
+                btn_close = dialog.findViewById(R.id.btn_close);
+                btn_close.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                btn_addBaton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // parse the baton
+                        // etDescription
+                        //
+                        //
+                        dialog.dismiss();   // closes the dialog after the button press
+                    }
+                });
+                dialog.show();
+            }
+        });
+
+
 
     }
 
