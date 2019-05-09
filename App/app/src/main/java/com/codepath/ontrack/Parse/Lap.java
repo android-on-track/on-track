@@ -75,7 +75,7 @@ public class Lap extends ParseObject{
         return getInt(KEY_BatonCompleted);
     }
 
-    public void set(int BatonCompleted){
+    public void setBatonCompleted(int BatonCompleted){
         put(KEY_BatonCompleted, BatonCompleted);
     }
 
@@ -102,7 +102,7 @@ public class Lap extends ParseObject{
         return getDate(KEY_DateSet);
     }
 
-    public void setDateSet(String DateSet){
+    public void setDateSet(Date DateSet){
         put(KEY_DateSet, DateSet);
     }
 

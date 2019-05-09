@@ -70,7 +70,7 @@ public class ProgressFragment extends Fragment {
                 tvProgressPercentage.setText(Float.toString((comp / task)* 100) + "%");
                 progressCircleX.setProgress(comp);
                 progressCircleX.setProgressMax(task);
-                int animationDuration = 3000; // 2500ms = 2,5s
+                int animationDuration = 5000;
                 progressCircleX.setProgressWithAnimation(comp, animationDuration); // Default duration = 1500ms
             }
         });

@@ -9,10 +9,12 @@
 
     <ImageView
         android:id="@+id/iv_profilePic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars[0]"
-        android:layout_marginTop="150dp" />
+        android:layout_width="142dp"
+        android:layout_height="164dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/xdefualtuser"
+        tools:srcCompat="@drawable/xdefualtuser" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -74,14 +76,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Task Completed" />
 
         <TextView
             android:id="@+id/tv_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="4" />
     </LinearLayout>
 
     <Button

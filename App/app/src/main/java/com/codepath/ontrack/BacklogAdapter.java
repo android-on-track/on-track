@@ -44,6 +44,11 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
         viewHolder.bind(lapx);
     }
 
+    public void clear() {
+        lap.clear();
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
         return lap.size();
