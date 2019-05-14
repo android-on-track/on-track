@@ -36,9 +36,9 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 **User Stories completed**
 - [x] User is able to sign up and login
 - [x] User is able to nagivate through different fragments 
-- [ ] User profile can be seen in the login Fragment
-- [ ] User can see all the batons created in the backlog Fragment
-- [ ] User is able to add batons in the lap Fragment
+- [x] User profile can be seen in the login Fragment
+- [x] User can see all the batons created in the backlog Fragment
+- [x] User is able to add batons in the lap Fragment
 
 **Optional Nice-to-have Stories**
 
@@ -53,7 +53,11 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthroughmay6.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+<img src='20190509_095657.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+
+<img src='20190509_100001.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+
+<img src='20190509_101017.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 ### 2. Screen Archetypes
 
