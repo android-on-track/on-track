@@ -53,6 +53,8 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 Here's a walkthrough of implemented user stories:
 
+<img src='20190509_095458.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+
 <img src='20190509_095657.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 <img src='20190509_100001.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
