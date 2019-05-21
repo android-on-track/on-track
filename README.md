@@ -1,6 +1,6 @@
 # OnTrack
 
-Not just another task management app.
+A mobile app to help you accomplish more.
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -29,16 +29,14 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 - [x] Database keeping track of users, checkpoints (high-level tasks), and batons (lower-level breakdown of tasks)
 - [x] Backlog to hold laps created
-- [ ] Push notifications for reminders to complete tasks
-- [ ] Camera to add photos to checkpoints
-- [ ] Create data visualisations of completed tasks
-
-**User Stories completed**
 - [x] User is able to sign up and login
 - [x] User is able to nagivate through different fragments 
 - [x] User profile can be seen in the login Fragment
 - [x] User can see all the batons created in the backlog Fragment
 - [x] User is able to add batons in the lap Fragment
+- [ ] Push notifications for reminders to complete tasks
+- [ ] Camera to add photos to checkpoints
+- [ ] Create data visualisations of completed tasks
 
 **Optional Nice-to-have Stories**
 
