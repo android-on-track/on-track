@@ -6,24 +6,28 @@
         android:id="@+id/icon_backlog"
         android:icon="@drawable/ic_ontrack_backlog"
         android:title="Backlog"
+        app:labelVisibilityMode="auto"
         android:visible="true"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/icon_lap"
         android:icon="@drawable/ic_ontrack_lap"
         android:title="Lap"
+        app:labelVisibilityMode="auto"
         android:visible="true"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/icon_progress"
         android:icon="@drawable/ic_ontrack_graph"
         android:title="Progress"
+        app:labelVisibilityMode="auto"
         android:visible="true"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
     <item
         android:id="@+id/icon_user"
         android:icon="@drawable/ic_ontrack_user"
         android:title="User Profile"
+        app:labelVisibilityMode="auto"
         android:visible="true"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
 </menu>
