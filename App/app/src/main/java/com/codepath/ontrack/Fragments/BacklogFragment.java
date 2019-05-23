@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.codepath.ontrack.BacklogAdapter;
 import com.codepath.ontrack.Parse.BackLog;
+import com.codepath.ontrack.Parse.Baton;
 import com.codepath.ontrack.Parse.Lap;
 import com.codepath.ontrack.R;
 import com.parse.FindCallback;
@@ -94,6 +95,7 @@ public class BacklogFragment extends Fragment {
                 queryLap();
             }
         });
+
 
         fab_add_checkpoint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,6 +198,7 @@ public class BacklogFragment extends Fragment {
 
     }
 
+////////////////////////////////////////////////////////////////////////////////////BACKEND SERVER
     //Get BackLogID
     private void getBackLogID(){
         ParseQuery<BackLog> parseQuery = new ParseQuery<>(BackLog.class);
@@ -248,7 +251,7 @@ public class BacklogFragment extends Fragment {
         });
         swipeContainer.setRefreshing(false);
     }
-
+////////////////////////////////POST
     //Post NEW CheckPoints
     private void saveCheckPoints(String description, int points, String priority){
         Lap lap = new Lap();
@@ -274,6 +277,28 @@ public class BacklogFragment extends Fragment {
                     return;
                 }
                 Toast.makeText(getContext(), "New Lap Created!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    //Post NEW BATONS
+    private void saveBaton(String description, int points, String priority){
+        Baton lap = new Baton();
+        lap.setDescription(description);
+        lap.setPoints(points);
+        lap.setPriority(priority);
+        lap.setName("NEW LAP");
+        lap.setCompleted(false);
+        lap.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e != null){
+                    Toast.makeText(getContext(), "NOTHINGHAPPEND", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                    return;
+                }
+                Toast.makeText(getContext(), "New BATON Created!", Toast.LENGTH_SHORT).show();
 
             }
         });

@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+/////////////////////////////////////////////////////////////////////////////////BACKEND SERVER
     //Query Data from the UserProfile
     private void queryUserProfile() {
         ParseQuery<UserProfile> parseQuery = new ParseQuery<>(UserProfile.class);

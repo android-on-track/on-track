@@ -45,15 +45,100 @@
         android:selectAllOnFocus="false"
         android:singleLine="false" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Weight: "
+            android:textColor="#DCDBDC"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#F4F2F3"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gradianthigh"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btn_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/gradianthigh"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Low"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gradianthigh"
+            android:text="Low"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btn_Mid"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gradianthigh"
+            android:text="Mid"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btn_High"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="@drawable/gradianthigh"
+            android:text="High"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_newBaton"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@drawable/gradianthigh"
-        android:textSize="20sp"
+        android:text="Add"
         android:textColor="#FFFFFF"
-        android:text="Add" />
+        android:textSize="20sp" />
 
 
 </LinearLayout>

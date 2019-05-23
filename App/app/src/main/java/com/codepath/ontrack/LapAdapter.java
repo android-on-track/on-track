@@ -13,40 +13,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.codepath.ontrack.Parse.BackLog;
 import com.codepath.ontrack.Parse.Baton;
 import com.codepath.ontrack.Parse.Lap;
-import com.parse.ParseException;
-import com.parse.SaveCallback;
 
 import java.util.List;
 
-public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHolder>{
+public class LapAdapter extends RecyclerView.Adapter<LapAdapter.ViewHolder>{
     private Context context;
-    private List<Lap> lap;
+    private List<Baton> lap;
     private String fragment_pick;
 
 
-    //Comp MAY23 SB
-    private BackLog currentBacklog;
-    private Button btn_Low;
-    private Button btn_Mid;
-    private Button btn_High;
-
-    //Increament
-    private TextView tv_weight;
-    private Button btn_increment;
-    private Button btn_decrement;
-    private TextView et_checkpoint_description;
-
-    //Values   MAY23 SB
-    private String priority;
-    private int lapValue;
-
-    public BacklogAdapter(Context context, List<Lap> laps, String fragment_pick){
+    public LapAdapter(Context context, List<Baton> laps, String fragment_pick){
         this.context = context;
         this.lap = laps;
         this.fragment_pick = fragment_pick;
@@ -54,15 +35,15 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+    public LapAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View view = null;
         view = LayoutInflater.from(context).inflate(R.layout.item_lap, parent, false);
-        return new ViewHolder(view);
+        return new LapAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        Lap lapx = lap.get(position);
+    public void onBindViewHolder(@NonNull LapAdapter.ViewHolder viewHolder, int position) {
+        Baton lapx = lap.get(position);
         viewHolder.bind(lapx);
     }
 
@@ -118,59 +99,12 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
                     dialog_add_baton.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     btn_add_baton = dialog_add_baton.findViewById(R.id.btn_newBaton);
                     btn_close_baton = dialog_add_baton.findViewById(R.id.btn_close_baton);
-
-                    //NEW MAY 23 SB
-                    priority = "";
-                    lapValue = 1;
-
-                    btn_Low = dialog_add_baton.findViewById(R.id.btn_Low);
-                    btn_Mid = dialog_add_baton.findViewById(R.id.btn_Mid);
-                    btn_High = dialog_add_baton.findViewById(R.id.btn_High);
-
-                    tv_weight = dialog_add_baton.findViewById(R.id.tv_weight);
-                    btn_increment = dialog_add_baton.findViewById(R.id.btn_increment);
-                    btn_decrement = dialog_add_baton.findViewById(R.id.btn_decrement);
-
-                    et_checkpoint_description = dialog_add_baton.findViewById(R.id.et_baton_description);
-
                     btn_close_baton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             dialog_add_baton.dismiss();
                         }
                     });
-
-                    //PRIORITY BUTTONS
-
-
-                    //Increament VALUE
-                    btn_increment.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            lapValue++;
-                            tv_weight.setText(Integer.toString(lapValue));
-                        }
-                    });
-
-                    //Decreament VALUE
-                    btn_decrement.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            if(lapValue > 1)
-                                lapValue--;
-                            tv_weight.setText(Integer.toString(lapValue));
-                        }
-                    });
-
-
-                    btn_close_baton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialog_add_baton.dismiss();
-                        }
-                    });
-
-
                     btn_add_baton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -178,24 +112,20 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
                             // et_baton_description
                             //
                             //
-                            String des = et_checkpoint_description.getText().toString();
-                            saveBaton(des, lapValue, priority);
                             dialog_add_baton.dismiss();   // closes the dialog after the button press
                         }
                     });
                     dialog_add_baton.show();
-                    //END MAY23
                 }
             });
 
         }
 
-        public void bind(Lap lapx){
+        public void bind(Baton lapx){
             tvPriority.setText("Priority " + lapx.getPriority());
             tvLapDescription.setText(lapx.getDescription());
-            tvLapPoints.setText(Integer.toString(lapx.getTotalPoints()));
-            tvLapCount.setText(Integer.toString(lapx.getBatonCount()));
-            tvFilecount.setText(Integer.toString(lapx.getFileCount()));
+            tvLapPoints.setText(Integer.toString(lapx.getPoints()));
+
 
             switch (lapx.getPriority()) {
                 case "Mid":
@@ -210,33 +140,11 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
             }
 
 
-           // ParseFile image = lapx.getImage();
-           // if(image != null) {
-          //      Glide.with(context).load(image.getUrl()).into(ivImage);
-          //  }
+            // ParseFile image = lapx.getImage();
+            // if(image != null) {
+            //      Glide.with(context).load(image.getUrl()).into(ivImage);
+            //  }
 
         }
-    }
-
-    //Post NEW BATONS
-    private void saveBaton(String description, int points, String priority){
-        Baton lap = new Baton();
-        lap.setDescription(description);
-        lap.setPoints(points);
-        lap.setPriority(priority);
-        lap.setName("NEW LAP");
-        lap.setCompleted(false);
-        lap.saveInBackground(new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-                if(e != null){
-                    Toast.makeText(context, "NOTHINGHAPPEND", Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                    return;
-                }
-                Toast.makeText(context, "New BATON Created!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
     }
 }
