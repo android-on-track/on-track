@@ -11,6 +11,6 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_item_btn"
-        android:title="Item"
+        android:title="logout"
         app:showAsAction="collapseActionView" />
 </menu>

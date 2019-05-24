@@ -10,22 +10,25 @@
 
     <ImageView
         android:id="@+id/iv_profilePic"
-        android:layout_width="142dp"
-        android:layout_height="164dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginLeft="140dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         app:srcCompat="@drawable/xdefualtuser"
         tools:srcCompat="@drawable/xdefualtuser" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
         <TextView
             android:id="@+id/tv_FirstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FirstName"
-            android:layout_toLeftOf="@id/tv_spaceHolder"/>
+            android:layout_toLeftOf="@id/tv_spaceHolder"
+            android:fontFamily="sans-serif-black"
+            android:text="John" />
 
         <TextView
             android:id="@+id/tv_spaceHolder"
@@ -41,24 +44,29 @@
             android:layout_marginStart="-1dp"
             android:layout_toEndOf="@+id/tv_spaceHolder"
             android:layout_toRightOf="@id/tv_spaceHolder"
-            android:text="LastName" />
+            android:fontFamily="sans-serif-black"
+            android:text="Doe" />
     </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Occupation/Title"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:layout_marginBottom="10dp"/>
+        android:text="Android Developer" />
 
     <TextView
         android:id="@+id/tv_about"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Some information about myself and whoknows what else you want other people to know about yourself"
-        android:layout_marginBottom="20dp"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="A computer once beat me at chess, but it was no match for me at kick boxing."
+        android:textAlignment="center"
+        tools:text="A computer once beat me at chess, but it was no match for me at kick boxing." />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,37 +74,58 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_taskcomplete" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            app:srcCompat="@drawable/ic_icon_task" />
 
         <TextView
             android:id="@+id/tv_TaskComplete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Task Completed" />
+            android:layout_weight="0.2"
+            android:fontFamily="sans-serif-normal"
+            android:text="Task Completed:" />
+
+        <TextView
+            android:id="@+id/tv_Taskpoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-normal"
+            android:text="314" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            app:srcCompat="@drawable/ic_icon_trophy" />
+
+        <TextView
+            android:id="@+id/tv_Points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:fontFamily="sans-serif-normal"
+            android:text="Points Collected:" />
 
         <TextView
             android:id="@+id/tv_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="4" />
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-normal"
+            android:text="606"
+            tools:text="606" />
     </LinearLayout>
-
-    <Button
-
-        android:id="@+id/LogoutBtn"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="LOG out" />
 
 </LinearLayout>

@@ -15,9 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.codepath.ontrack.Parse.BackLog;
 import com.codepath.ontrack.Parse.Baton;
-import com.codepath.ontrack.Parse.Lap;
 
 import java.util.List;
 
@@ -37,7 +35,7 @@ public class LapAdapter extends RecyclerView.Adapter<LapAdapter.ViewHolder>{
     @Override
     public LapAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View view = null;
-        view = LayoutInflater.from(context).inflate(R.layout.item_lap, parent, false);
+        view = LayoutInflater.from(context).inflate(R.layout.item_baton, parent, false);
         return new LapAdapter.ViewHolder(view);
     }
 

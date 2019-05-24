@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RLayoutX"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.473"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0"
+    android:elevation="50dp"
+    android:padding="8dp"
+    android:background="@drawable/border_item_lap">
+    <ImageView
+        android:id="@+id/ivPriorityColor"
+
+        android:layout_width="156dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/gradiantlow"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <TextView
+        android:id="@+id/tvPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:text="Priority "
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPriorityColor"
+        app:layout_constraintEnd_toEndOf="@+id/ivPriorityColor"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="@+id/ivPriorityColor"
+        app:layout_constraintTop_toTopOf="@+id/ivPriorityColor"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <TextView
+        android:id="@+id/tvLapDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="This is where the lap descrition is located"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/RLayoutX"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPriorityColor" />
+
+    <TextView
+        android:id="@+id/tvLapPoints"
+        android:layout_width="38dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="8dp"
+        android:text="10"
+        android:textAlignment="textEnd"
+        android:textColor="#1E81EB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ivPriorityColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_baton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:backgroundTint="#FFFFFF"
+        app:borderWidth="1dp"
+        app:fabCustomSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fab_profile_backlog"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toEndOf="@+id/tvFilecount"
+        app:srcCompat="@drawable/ic_plus" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_profile_backlog"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:scaleType="center"
+        app:backgroundTint="#D8D7E5"
+        app:fabCustomSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_account" />
+
+
+</android.support.constraint.ConstraintLayout>

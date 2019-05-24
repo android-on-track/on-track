@@ -10,15 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.codepath.ontrack.Parse.BackLog;
-import com.parse.FindCallback;
 import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
-
-import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
@@ -30,10 +24,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //ParseUser.logOut();
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         etSignup = findViewById(R.id.etSignup);
+      //  goMainActivity();
         etSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

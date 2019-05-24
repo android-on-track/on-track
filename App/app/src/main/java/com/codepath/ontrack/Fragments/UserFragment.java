@@ -11,10 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextClock;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.codepath.ontrack.LoginActivity;
 import com.codepath.ontrack.Parse.UserProfile;
 import com.codepath.ontrack.R;
@@ -55,16 +53,6 @@ public class UserFragment extends Fragment {
 
         queryUserProfile();
         //END NEW
-
-        logoutBtn = view.findViewById(R.id.LogoutBtn);
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ParseUser.logOut();
-                ParseUser currentUser = ParseUser.getCurrentUser();
-                goLoginActivity();
-            }
-        });
     }
 
     //Query Data from the UserProfile

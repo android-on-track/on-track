@@ -7,19 +7,44 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_login"
     tools:context=".SignupActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="?android:attr/listDivider" />
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/white" />
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="160dp"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/etSignUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="username"
@@ -73,6 +98,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/background_btn"
         android:elevation="10dp"
         android:text="Sign Up"
         android:textColor="@android:color/white"
