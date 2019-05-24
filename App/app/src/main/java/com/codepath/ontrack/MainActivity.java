@@ -1,5 +1,6 @@
 package com.codepath.ontrack;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -106,6 +107,20 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu, this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_item_btn:
+                Intent i = new Intent(this, LoginActivity.class);
+                ParseUser.logOut();
+                ParseUser currentUser = ParseUser.getCurrentUser();
+                startActivity(i);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 /////////////////////////////////////////////////////////////////////////////////BACKEND SERVER

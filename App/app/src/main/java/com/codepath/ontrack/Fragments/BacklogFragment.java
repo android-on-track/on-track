@@ -23,7 +23,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.codepath.ontrack.BacklogAdapter;
 import com.codepath.ontrack.Parse.BackLog;
 import com.codepath.ontrack.Parse.Baton;
@@ -37,7 +36,6 @@ import com.parse.SaveCallback;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -298,7 +296,7 @@ public class BacklogFragment extends Fragment {
                     e.printStackTrace();
                     return;
                 }
-                Toast.makeText(getContext(), "New Lap Created!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "New Baton Created!", Toast.LENGTH_SHORT).show();
 
             }
         });
