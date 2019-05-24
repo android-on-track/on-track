@@ -137,6 +137,38 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
 
                     et_checkpoint_description = dialog_add_baton.findViewById(R.id.et_baton_description);
 
+                    //PRIORITY BUTTONS
+                    btn_Low.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            priority = "Low";
+                            btn_Low.setBackground(v.getResources().getDrawable(R.drawable.gradiantlow));
+                            btn_Mid.setBackground(v.getResources().getDrawable(R.drawable.gradianthigh));
+                            btn_High.setBackground(v.getResources().getDrawable(R.drawable.gradianthigh));
+                        }
+                    });
+
+                    btn_Mid.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            priority = "Mid";
+                            btn_Low.setBackground(v.getResources().getDrawable(R.drawable.gradianthigh));
+                            btn_Mid.setBackground(v.getResources().getDrawable(R.drawable.gradiantlow));
+                            btn_High.setBackground(v.getResources().getDrawable(R.drawable.gradianthigh));
+                        }
+                    });
+
+                    btn_High.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            priority = "High";
+                            btn_Low.setBackground(v.getResources().getDrawable(R.drawable.gradianthigh));
+                            btn_Mid.setBackground(v.getResources().getDrawable(R.drawable.gradianthigh));
+                            btn_High.setBackground(v.getResources().getDrawable(R.drawable.gradiantlow));
+                        }
+                    });
+
+
                     btn_close_baton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

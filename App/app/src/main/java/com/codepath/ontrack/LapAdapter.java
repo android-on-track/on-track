@@ -120,7 +120,7 @@ public class LapAdapter extends RecyclerView.Adapter<LapAdapter.ViewHolder>{
                             // et_checkpoint_description
                             // tv_weight
                             //
-                            Toast.makeText(context, "Congrats Baton Completed \n You ear", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Congrats Baton Completed", Toast.LENGTH_SHORT).show();
 
                             battt.setVisibility(battt.GONE);
                             compBaton.dismiss();   // closes the dialog after the button press
