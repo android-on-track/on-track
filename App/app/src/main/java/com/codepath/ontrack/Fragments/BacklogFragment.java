@@ -122,7 +122,7 @@ public class BacklogFragment extends Fragment {
                 btn_decrement = dialog_add_checkpoint.findViewById(R.id.btn_decrement);
 
                 et_checkpoint_description = dialog_add_checkpoint.findViewById(R.id.et_checkpoint_description);
-                tv_title_check_point.setText("NEW BATON");
+
 
                 //PRIORITY BUTTONS
                 btn_Low.setOnClickListener(new View.OnClickListener() {
