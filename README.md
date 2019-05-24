@@ -2,6 +2,8 @@
 
 A mobile app to help you accomplish more.
 
+Interested in how we developed this app? [Check out our presentation deck!](https://docs.google.com/presentation/d/1iezCXw-eiGEWCEk1DN2Zeyie5f-sjsL3hjwXaSheA7w/edit?usp=sharing)
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -51,13 +53,13 @@ OnTrack is an app for students looking to increase their daily focus and drive b
 
 Here's a walkthrough of implemented user stories:
 
-<img src='20190509_095458.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+<img src='walkthroughs/20190524_142633.gif?raw=true' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
-<img src='20190509_095657.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+<img src='walkthroughs/20190524_144307.gif?raw=true' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
-<img src='20190509_100001.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+<img src='walkthroughs/20190524_144344.gif?raw=true' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
-<img src='20190509_101017.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+<img src='walkthroughs/20190524_143059.gif?raw=true' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 ### 2. Screen Archetypes
 
