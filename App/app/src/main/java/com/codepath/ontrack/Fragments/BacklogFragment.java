@@ -165,7 +165,7 @@ public class BacklogFragment extends Fragment {
                     }
                 });
 
-                //Decreament VALUE
+                //Decrement VALUE
                 btn_decrement.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
