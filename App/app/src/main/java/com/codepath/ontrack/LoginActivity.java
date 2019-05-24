@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        //checkUser();
+        checkUser();
     }
 
     private void checkUser() {

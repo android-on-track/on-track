@@ -1,11 +1,13 @@
 package com.codepath.ontrack;
 
 import android.app.Dialog;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +31,7 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
     private List<Lap> lap;
     private String fragment_pick;
 
+    private FloatingActionButton fab_profile;
 
     //Comp MAY23 SB
     private BackLog currentBacklog;
@@ -41,6 +44,7 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
     private Button btn_increment;
     private Button btn_decrement;
     private TextView et_checkpoint_description;
+
 
     //Values   MAY23 SB
     private String priority;
@@ -197,6 +201,8 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
             tvLapCount.setText(Integer.toString(lapx.getBatonCount()));
             tvFilecount.setText(Integer.toString(lapx.getFileCount()));
 
+
+
             switch (lapx.getPriority()) {
                 case "Mid":
                     Glide.with(context).load(R.drawable.gradiantmed).into(ivPriorityColor);
@@ -217,6 +223,7 @@ public class BacklogAdapter extends RecyclerView.Adapter<BacklogAdapter.ViewHold
 
         }
     }
+
 
     //Post NEW BATONS
     private void saveBaton(String description, int points, String priority){

@@ -69,6 +69,11 @@ public class LapFragment extends Fragment {
     private ImageView ivPriorityColor;
 
     private SwipeRefreshLayout swipeContainer;
+    ///////NEWWWWWWW
+    private Dialog compBaton;
+    private Button btnYes;
+    private Button btnNo;
+    private FloatingActionButton fbp;
 
 
     @Nullable
@@ -85,6 +90,8 @@ public class LapFragment extends Fragment {
         rvLaps = view.findViewById(R.id.rvLaps);
         tv_weight = view.findViewById(R.id.tv_weight);
         dialog_add_checkpoint = new Dialog(getContext());
+
+
         mLaps = new ArrayList<>();
         adapter = new LapAdapter(getContext(), mLaps, "PostsFragment");
         rvLaps.setAdapter(adapter);

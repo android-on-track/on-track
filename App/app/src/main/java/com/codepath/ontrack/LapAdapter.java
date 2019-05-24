@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.codepath.ontrack.Parse.Baton;
@@ -23,6 +24,10 @@ public class LapAdapter extends RecyclerView.Adapter<LapAdapter.ViewHolder>{
     private Context context;
     private List<Baton> lap;
     private String fragment_pick;
+
+    ///////NEWWWWWWW
+    private Dialog compBaton;
+
 
 
     public LapAdapter(Context context, List<Baton> laps, String fragment_pick){
@@ -56,6 +61,9 @@ public class LapAdapter extends RecyclerView.Adapter<LapAdapter.ViewHolder>{
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
+        private Button btnYes;
+        private Button btnNo;
+        private FloatingActionButton fbp;
         private TextView tvPriority;
         private TextView tvLapDescription;
         private TextView tvLapPoints;
@@ -89,31 +97,48 @@ public class LapAdapter extends RecyclerView.Adapter<LapAdapter.ViewHolder>{
             et_baton_description = itemView.findViewById(R.id.et_baton_description);
 
             fab_add_baton = itemView.findViewById(R.id.fab_add_baton);
+
+            final View battt = itemView;
+
+            //NEWWWW
+            fbp = itemView.findViewById(R.id.fab_profile_backlog);
+            compBaton = new Dialog(context);
+            fbp.hide();
             fab_add_baton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    dialog_add_baton = new Dialog(context);
-                    dialog_add_baton.setContentView(R.layout.add_baton);
-                    dialog_add_baton.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    btn_add_baton = dialog_add_baton.findViewById(R.id.btn_newBaton);
-                    btn_close_baton = dialog_add_baton.findViewById(R.id.btn_close_baton);
-                    btn_close_baton.setOnClickListener(new View.OnClickListener() {
+                    compBaton.setContentView(R.layout.complete_baton);
+                    compBaton.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    btnYes = compBaton.findViewById(R.id.btn_yes);
+                    btnNo = compBaton.findViewById(R.id.btn_no);
+
+
+                    btnYes.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            dialog_add_baton.dismiss();
+                            // parse the checkpoint
+                            // et_checkpoint_description
+                            // tv_weight
+                            //
+                            Toast.makeText(context, "Congrats Baton Completed \n You ear", Toast.LENGTH_SHORT).show();
+
+                            battt.setVisibility(battt.GONE);
+                            compBaton.dismiss();   // closes the dialog after the button press
                         }
                     });
-                    btn_add_baton.setOnClickListener(new View.OnClickListener() {
+
+                    btnNo.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            // parse the baton
-                            // et_baton_description
+                            // parse the checkpoint
+                            // et_checkpoint_description
+                            // tv_weight
                             //
-                            //
-                            dialog_add_baton.dismiss();   // closes the dialog after the button press
+                            compBaton.dismiss();   // closes the dialog after the button press
                         }
                     });
-                    dialog_add_baton.show();
+
+                    compBaton.show();
                 }
             });
 

@@ -1,6 +1,8 @@
 package com.codepath.ontrack.Fragments;
 
 import android.app.Dialog;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -48,6 +51,7 @@ public class BacklogFragment extends Fragment {
     protected BacklogAdapter adapter;
     private TextView et_checkpoint_description;
     protected List<Lap> mLaps;
+    private TextView tv_title_check_point;
     private String BackLogID = "";
 
     private int lapValue;
@@ -80,6 +84,8 @@ public class BacklogFragment extends Fragment {
         swipeContainer = view.findViewById(R.id.SwipeContainer);
         fab_add_checkpoint = view.findViewById(R.id.fab_add_checkpoint);
         et_checkpoint_description = view.findViewById(R.id.et_checkpoint_description);
+
+
         rvLaps = view.findViewById(R.id.rvLaps);
         tv_weight = view.findViewById(R.id.tv_weight);
         dialog_add_checkpoint = new Dialog(getContext());
@@ -87,6 +93,7 @@ public class BacklogFragment extends Fragment {
         adapter = new BacklogAdapter(getContext(), mLaps, "PostsFragment");
         rvLaps.setAdapter(adapter);
         rvLaps.setLayoutManager(new LinearLayoutManager(getContext()));
+
         queryLap();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -104,7 +111,7 @@ public class BacklogFragment extends Fragment {
                 dialog_add_checkpoint.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 btn_add_checkpoint = dialog_add_checkpoint.findViewById(R.id.btn_new_checkpoint);
                 btn_close_checkpoint = dialog_add_checkpoint.findViewById(R.id.btn_close_checkpoint);
-
+                tv_title_check_point = dialog_add_checkpoint.findViewById(R.id.tv_title_check_point);
                 //NEW MAY 8 SB
                 priority = "";
                 lapValue = 1;
@@ -117,6 +124,7 @@ public class BacklogFragment extends Fragment {
                 btn_decrement = dialog_add_checkpoint.findViewById(R.id.btn_decrement);
 
                 et_checkpoint_description = dialog_add_checkpoint.findViewById(R.id.et_checkpoint_description);
+                tv_title_check_point.setText("NEW BATON");
 
                 //PRIORITY BUTTONS
                 btn_Low.setOnClickListener(new View.OnClickListener() {
@@ -190,11 +198,25 @@ public class BacklogFragment extends Fragment {
                         dialog_add_checkpoint.dismiss();   // closes the dialog after the button press
                         adapter.clear();
                         queryLap();
+
                     }
                 });
                 dialog_add_checkpoint.show();
             }
         });
+
+    }
+
+    public void addNotification(){
+        ////////////////////////////////Notifications
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getContext());
+        mBuilder.setSmallIcon(R.id.icon_lap);
+        mBuilder.setContentTitle("Notification Alert, Click Me!");
+        mBuilder.setContentText("Hi, This is Android Notification Detail!");
+        mBuilder.setAutoCancel(true);
+
+        NotificationManager mNotificationManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(0, mBuilder.build());
 
     }
 
